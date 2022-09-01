@@ -1,0 +1,15 @@
+tasks:
+  - name: Running Conductor
+    before: cd docker
+    init: docker-compose build
+    command: docker-compose up
+
+ports:
+  - name: Server
+    description: Conductor Server URL
+    port: 8080
+    visibility: public
+  - name: UI
+    description: Conductor UI URL
+    port: 5000
+    visibility: public
